@@ -61,7 +61,7 @@ QUnit.test("test equals avec sans stub", function(assert)
 	m1EUR.getCurrency.returns("EUR");
 	m1EUR.equals.restore();
 
-	assert.ok(m1eur.equals(m1EUR),"1 EUR égal à 1 EUR");
+	assert.ok(m1eur.equals(m1EUR),"1 eur égal à 1 EUR");
 	assert.ok(m1EUR.equals(m1eur),"1 EUR égal à 1 eur");
 	assert.deepEqual(m1eur,m1EUR);
 });
