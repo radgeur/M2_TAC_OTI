@@ -20,4 +20,15 @@ public class MoneyOps {
     Money m=mf.createMoney(m1.getValue()+m2.getValue(),m1.getCurrency());
     return m;
   }
+  
+  /**
+   * Sub moneys having the same currency
+  */
+  public static Money simpleSub(Money m1, Money m2) throws IncompatibleCurrencyException, UnexistingCurrencyException, NegativResultException
+  {
+	  if(m1.getValue()<m2.getValue())
+		  throw new NegativResultException(m1,m2);
+	  Money m=mf.createMoney(m1.getValue()-m2.getValue(),m1.getCurrency());
+	  return m;
+  }
 }

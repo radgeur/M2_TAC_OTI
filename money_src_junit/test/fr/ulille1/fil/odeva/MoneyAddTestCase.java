@@ -29,4 +29,15 @@ public class MoneyAddTestCase
         Money result=MoneyOps.simpleAdd(f12EUR,f14EUR);
         assertEquals(expected,result);
     }
+    
+    /**
+     * simpleSub
+     */
+    @Test
+    public void testSimpleSub() throws UnexistingCurrencyException, NegativResultException
+    {
+        Money expected=mf.createMoney(2, "EUR");
+        Money result=MoneyOps.simpleSub(f14EUR,f12EUR);
+        assertEquals(expected,result);
+    }
 }
